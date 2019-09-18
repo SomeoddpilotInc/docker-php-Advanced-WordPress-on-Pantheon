@@ -33,7 +33,7 @@ RUN composer -n global require -n "hirak/prestissimo:^0.3"
 
 # Install Terminus
 RUN mkdir -p /usr/local/share/terminus
-RUN /usr/bin/env COMPOSER_BIN_DIR=/usr/local/bin composer -n --working-dir=/usr/local/share/terminus require pantheon-systems/terminus:"^2.0.1"
+RUN /usr/bin/env COMPOSER_BIN_DIR=/usr/local/bin composer -n --working-dir=/usr/local/share/terminus require pantheon-systems/terminus:"2.0.1"
 
 # Install Terminus plugins
 env TERMINUS_PLUGINS_DIR /usr/local/share/terminus-plugins
