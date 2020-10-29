@@ -29,6 +29,11 @@ RUN \
 	echo -e "\nInstalling ssh..." && \
 	apt-get install -y openssh-client
 
+# Install PHP Extenstions
+RUN \ 
+	docker-php-ext-configure intl && \
+	docker-php-ext-install intl
+
 RUN composer -n global require -n "hirak/prestissimo:^0.3"
 
 # Install Terminus
